@@ -22,6 +22,13 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(cors({
+  origin: '*',
+  credentials: true,
+  allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json',
+  methods: 'GET,PUT,POST,DELETE,OPTIONS'
+}));
+
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
